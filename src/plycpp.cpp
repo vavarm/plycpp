@@ -131,8 +131,8 @@ namespace plycpp
 
 	PropertyArray::PropertyArray(const std::type_index type, const size_t size, const bool isList)
 		: type(type),
-		isList(isList),
-		stepSize(dataTypeToStepSize(type))
+		stepSize(dataTypeToStepSize(type)),
+        isList(isList)
 	{
 		this->data.resize(size * this->stepSize);
 	}
